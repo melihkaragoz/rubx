@@ -15,5 +15,6 @@ TCP ile yayınladığınızda size "8.tcp.ngrok.io:4658" benzeri bir link çıka
 GEREKSİNİMLER :
 
 - ngrok => terminalden "pip3 install pyngrok" komutunuz çalıştırarak kurabilirsiniz.
+- php   => sistemde yüklü değilse "sudo apt install php7.4-cli" yazarak kurabilirsiniz.
 
 Rubx.py dosyasını çalıştırıp program içerisinden kullanacağınız web uygulamasını seçerek server hazırlıklarını otomatik yaptırıp sistemi hazır hale getirebilirsiniz.
