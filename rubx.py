@@ -39,7 +39,7 @@ def prepare(pfm,loop_count):
 	try:
 		print(colors.YELLOW+" ' Ctrl + C ' for back to menu \n")
 		print("System : "+colors.GREEN+"active \n"+colors.YELLOW+"Running : "+colors.GREEN+"localhost:8080 >>>  {}".format(pfm)+colors.BLACK)
-		php = "php -S localhost:8080 -t sites/{} > /dev/null 2>1&".format(pfm)
+		php = "php -S localhost:8080 -t sites/{} > /dev/null 2>log&".format(pfm)
 		if(loop_count < 1):
 			pro = subprocess.Popen(php, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid) 		
 		else:
