@@ -49,8 +49,10 @@ def prepare(pfm,loop_count):
 		tunneling()
 	except:
 		print(" ~ kill process")
-		os.killpg(os.getpgid(pro.pid), signal.SIGTERM) 
-
+		try:
+			os.killpg(os.getpgid(pro.pid), signal.SIGTERM) 
+		except:
+			pass
 
 platforms = {
 
