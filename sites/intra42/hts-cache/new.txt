@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+00:37:53	5227/5227	---MCZ	200	added ('OK')	text/html	etag:W/%223ceccc1e507764752b476704317b06f2%22	https://signin.intra.42.fr/users/sign_in	~/intra42/intra42/signin.intra.42.fr/users/sign_in.html	(from )
+00:37:54	164/164	---MCZ	200	added ('OK')	text/plain	date:Tue,%2029%20Nov%202022%2009:32:06%20GMT	https://signin.intra.42.fr/robots.txt		(from )
+00:37:55	5112/5112	---MCZ	200	added ('OK')	text/html	etag:W/%226c92c4cfe9d6011162747c78a4898272%22	https://signin.intra.42.fr/users/password/new	~/intra42/intra42/signin.intra.42.fr/users/password/new.html	(from https://signin.intra.42.fr/users/sign_in)

@@ -1,0 +1,8 @@
+https://signin.intra.42.fr/users/sign_in -O "~/intra42/intra42" -%v
+File generated automatically on Sat, 03 Dec 2022 00:37:51, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

