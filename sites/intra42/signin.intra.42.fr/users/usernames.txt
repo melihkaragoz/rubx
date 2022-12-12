@@ -1,2 +1,0 @@
-Account: qwe Pass: wqeqweq
-Account: 1232 Pass: 23123

